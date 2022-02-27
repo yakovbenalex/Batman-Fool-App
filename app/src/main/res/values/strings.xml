@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Бэтмен Тупой</string>
+    <string name="youdontgetanythinggiveup">У тебя ничего не получиться, сдавайся</string>
+    <string name="iamnotafraidyou">Я тебя не боюсь</string>
+    <string name="giveup1">Сдавайся 1</string>
+    <string name="giveup2">Сдавайся 2</string>
+    <string name="giveup3">Сдавайся 3</string>
+    <string name="batman">Batman</string>
+</resources>
