@@ -5,5 +5,7 @@
     <string name="giveup1">Сдавайся 1</string>
     <string name="giveup2">Сдавайся 2</string>
     <string name="giveup3">Сдавайся 3</string>
+    <string name="giveup_if_you_want_live">Сдавайся, если хочешь жить</string>
+    <string name="i_will_destroy_you_a_nursing_profession">Я тебя уничтожу чокнутный профессор</string>
     <string name="batman">Batman</string>
 </resources>

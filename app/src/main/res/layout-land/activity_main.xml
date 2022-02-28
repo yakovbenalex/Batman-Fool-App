@@ -6,76 +6,78 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/button_batman1"
+    <ScrollView
+        android:id="@+id/scrollLayoutButtonList"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/margin_default"
-        android:layout_marginRight="@dimen/margin_default"
-        android:text="@string/youdontgetanythinggiveup"
-        app:layout_constraintBottom_toTopOf="@+id/button_batman2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.5"
-        app:layout_constraintVertical_chainStyle="packed" />
-
-    <Button
-        android:id="@+id/button_batman2"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="@dimen/margin_default"
-        android:text="@string/iamnotafraidyou"
-        app:layout_constraintBottom_toTopOf="@+id/button_batman3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/button_batman1"
-        app:layout_constraintTop_toBottomOf="@+id/button_batman1" />
-
-    <Button
-        android:id="@+id/button_batman3"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="@dimen/margin_default"
-        android:text="@string/giveup1"
-        app:layout_constraintBottom_toTopOf="@+id/button_batman4"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/button_batman1"
-        app:layout_constraintTop_toBottomOf="@+id/button_batman2" />
-
-    <Button
-        android:id="@+id/button_batman4"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="@dimen/margin_default"
-        android:text="@string/giveup2"
-        app:layout_constraintBottom_toTopOf="@+id/button_batman5"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/button_batman1"
-        app:layout_constraintTop_toBottomOf="@+id/button_batman3" />
-
-    <Button
-        android:id="@+id/button_batman5"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="@dimen/margin_default"
-        android:layout_marginBottom="@dimen/margin_default"
-        android:text="@string/giveup3"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/button_batman1"
-        app:layout_constraintTop_toBottomOf="@+id/button_batman4" />
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/margin_default">
+
+            <Button
+                android:id="@+id/buttonBatman1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/youdontgetanythinggiveup" />
+
+            <Button
+                android:id="@+id/buttonBatman6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/i_will_destroy_you_a_nursing_profession" />
+
+            <Button
+                android:id="@+id/buttonBatman7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/giveup_if_you_want_live" />
+
+            <Button
+                android:id="@+id/buttonBatman2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/iamnotafraidyou" />
+
+            <Button
+                android:id="@+id/buttonBatman3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/giveup1" />
+
+            <Button
+                android:id="@+id/buttonBatman4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/giveup2" />
+
+            <Button
+                android:id="@+id/buttonBatman5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/giveup3" />
+
+        </LinearLayout>
+
+    </ScrollView>
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_margin="8dp"
+        android:contentDescription="@string/batman"
         android:scaleType="fitCenter"
-        app:layout_constraintWidth_max="700dp"
-        app:layout_constraintBottom_toTopOf="@id/button_batman1"
+        app:layout_constraintBottom_toTopOf="@id/scrollLayoutButtonList"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toLeftOf="@id/button_batman1"
+        app:layout_constraintRight_toLeftOf="@id/scrollLayoutButtonList"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/batman_fool_main"
-        android:contentDescription="@string/batman" />
+        app:layout_constraintWidth_max="700dp"
+        app:srcCompat="@drawable/batman_fool_main" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
