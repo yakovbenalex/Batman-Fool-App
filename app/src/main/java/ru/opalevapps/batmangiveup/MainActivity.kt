@@ -7,6 +7,8 @@ import androidx.appcompat.app.AppCompatActivity
 
 
 class MainActivity : AppCompatActivity() {
+    lateinit var mSound: MediaPlayer
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -20,25 +22,38 @@ class MainActivity : AppCompatActivity() {
         val buttonBatman7: Button = findViewById(R.id.buttonBatman7)
 
         buttonBatman1.setOnClickListener {
-            MediaPlayer.create(this, R.raw.you_dont_get_anything_giveup).start()
+            playSoundFromRaw(R.raw.you_dont_get_anything_giveup)
         }
         buttonBatman2.setOnClickListener {
-            MediaPlayer.create(this, R.raw.i_am_not_afraid_you).start()
+            playSoundFromRaw(R.raw.i_am_not_afraid_you)
         }
         buttonBatman3.setOnClickListener {
-            MediaPlayer.create(this, R.raw.giveup1).start()
+            playSoundFromRaw(R.raw.giveup1)
         }
         buttonBatman4.setOnClickListener {
-            MediaPlayer.create(this, R.raw.giveup2).start()
+            playSoundFromRaw(R.raw.giveup2)
         }
         buttonBatman5.setOnClickListener {
-            MediaPlayer.create(this, R.raw.giveup3).start()
+            playSoundFromRaw(R.raw.giveup3)
         }
         buttonBatman6.setOnClickListener {
-            MediaPlayer.create(this, R.raw.i_will_destroy_you_a_nursing_profession).start()
+            playSoundFromRaw(R.raw.i_will_destroy_you_a_nursing_profession)
         }
         buttonBatman7.setOnClickListener {
-            MediaPlayer.create(this, R.raw.giveup_if_you_want_live).start()
+            playSoundFromRaw(R.raw.giveup_if_you_want_live)
+        }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        mSound = MediaPlayer()
+    }
+
+    private fun playSoundFromRaw(soundRawId: Int) {
+        mSound = MediaPlayer.create(this, soundRawId)
+        mSound.start()
+        mSound.setOnCompletionListener { mediaPlayer ->
+            mediaPlayer.release()
         }
     }
 }
